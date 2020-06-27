@@ -1,0 +1,42 @@
+background no
+use_xft yes
+#xftfont monospace:pixelsize=10
+#xftfont Blue Highway:pixelsize=16
+xftfont ubuntu:pixelsize=11
+xftalpha 0.8
+#xftalpha .3
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_colour 060606 ##0038AE
+#own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0
+double_buffer yes
+draw_shades no
+draw_outline yes
+draw_borders no
+draw_graph_borders no
+stippled_borders 0
+border_margin 4
+border_width 0
+#default_color AEC283
+default_color black
+default_shade_color grey
+default_outline_color 666666
+alignment top_left
+gap_x 1106
+gap_y 20
+no_buffers yes
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale yes
+use_spacer yes
+minimum_size 200 130
+#maximum_width 360
+
+TEXT
+#${execi 60 cat -n /home/web/todo.txt  | fold -w50}
+${color e0e0e0}${font Noto Serif CJK KR:bold:pixelsize=12}${voffset -17}${exec ~/.config/conky/esDaily/head.sh}
+${color e0e0e0}${font Open Sans:pixelsize=11:}${voffset -20}${exec ~/.config/conky/esDaily/body.sh}
