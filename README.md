@@ -1,4 +1,4 @@
-# esConky
+# esDaily
 Texto diário atravéz do conky
 
 Execute o daily
