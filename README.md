@@ -1,6 +1,6 @@
 # esDaily
 Texto diário atravéz do conky
-![480x230](https://github.com/andryeltj/esDaily/edDaily.png)
+<img src="https://github.com/andryeltj/esDaily/edDaily.png" />
 
 Execute o daily
 
