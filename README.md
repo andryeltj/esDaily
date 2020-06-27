@@ -1,7 +1,7 @@
 # esDaily
 Texto diário atravéz do conky
 <p align="center">
-<img src="https://github.com/andryeltj/esDaily/master/edDaily.png" width="350" />
+<img src="https://github.com/andryeltj/esDaily/master/esDaily.png" width="350" />
 </p>
 Execute o daily
 
