@@ -23,7 +23,7 @@ NOMDIA=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $2}'`
 TXTDIA=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $4}'`
 DATTXT=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $5}' | fold -w20 -s`
 FTCOMM=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $6}'`
-COMMEN=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $7}' | fold -w32 -s`
+COMMEN=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $7}' | fold -w40 -s`
 #printf "\n$NOMDIA, $DIA de $MESNOME.\n\n$DATTXT\n— $TXTDIA\n"
 printf "\n\n$COMMEN\n— $FTCOMM\n";
 
