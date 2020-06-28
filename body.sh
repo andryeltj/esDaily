@@ -5,7 +5,7 @@ DIA=$(date '+%d')
 LINHA=$(date '+%d.%m.%Y')
 MESNOME=""
 troca=""
-if [ $MES == "01" ]; then MESNOME="Janeibro"; fi
+if [ $MES == "01" ]; then MESNOME="Janeiro"; fi
 if [ $MES == "02" ]; then MESNOME="Fevereiro"; fi
 if [ $MES == "03" ]; then MESNOME="Março"; fi
 if [ $MES == "04" ]; then MESNOME="Abril"; fi
