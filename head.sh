@@ -17,8 +17,8 @@ if [ $MES == "09" ]; then MESNOME="Setembro"; fi
 if [ $MES == "10" ]; then MESNOME="Outubro"; fi
 if [ $MES == "11" ]; then MESNOME="Novembro"; fi
 if [ $MES == "12" ]; then MESNOME="Dezembro"; fi
-TABELA=`cat es$ANO.tsv`
-#if [ -e $TABELA > "" ]; then troca=$troca; else echo "O arquivo está faltando"; fi
+TABELA="$HOME/.config/conky/esDaily/es"$ANO".tsv"
+[ -f $TABELA ] && troca=$troca || wget -q --show-progress -c "https://raw.githubusercontent.com/andryeltj/esDaily/master/es$ANO.tsv"
 NOMDIA=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $2}'`
 TXTDIA=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $4}'`
 DATTXT=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $5}' | fold -w40 -s`
@@ -26,4 +26,3 @@ FTCOMM=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $6}'`
 COMMEN=`cat es$ANO.tsv | grep -w "$LINHA" | awk -F "	" '{print $7}' | fold -w32 -s`
 printf "\n$NOMDIA, $DIA de $MESNOME.\n\n$DATTXT\n— $TXTDIA\n"
 #printf "\n\n$COMMEN\n— $FTCOMM\n";
-
