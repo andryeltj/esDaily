@@ -24,7 +24,7 @@ border_width 0
 #default_color AEC283
 default_color black
 default_shade_color grey
-default_outline_color 606060
+default_outline_color e0e0e0
 alignment top_left
 gap_x 1106
 gap_y 20
@@ -38,11 +38,11 @@ minimum_size 200 130
 
 TEXT
 #${execi 60 cat -n /home/web/todo.txt  | fold -w50}
-${color e0e0e0}${font Monospace Regular:bold:pixelsize=15}${voffset -17}${exec /home/usuario/.config/conky/esDaily/head.sh}
-${color e0e0e0}${font Monospace Regular:bold:pixelsize=13}${voffset -17}${exec ANO=$(date '+%Y') && LINHA=$(date '+%d.%m.%Y') && cat /home/`whoami`/.config/conky/esDaily/es$ANO.tsv | grep -w $LINHA | awk -F "	" '{print $5}' | fold -w38 -s}
-${color e0e0e0}${font Open Sans:bold:pixelsize=12}${voffset -20}${exec ANO=$(date '+%Y') && LINHA=$(date '+%d.%m.%Y') && echo "
+${color 303030}${font Monospace Regular:bold:pixelsize=15}${voffset -17}${exec /home/usuario/.config/conky/esDaily/head.sh}
+${color 303030}${font Monospace Regular:bold:pixelsize=13}${voffset -17}${exec ANO=$(date '+%Y') && LINHA=$(date '+%d.%m.%Y') && cat /home/`whoami`/.config/conky/esDaily/es$ANO.tsv | grep -w $LINHA | awk -F "	" '{print $5}' | fold -w38 -s}
+${color 303030}${font Open Sans:bold:pixelsize=12}${voffset -20}${exec ANO=$(date '+%Y') && LINHA=$(date '+%d.%m.%Y') && echo "
 " && printf "— "; cat /home/`whoami`/.config/conky/esDaily/es$ANO.tsv | grep -w $LINHA | awk -F "	" '{print $4}' | fold -w38 -s}
-${color e0e0e0}${font Monospace Regular:pixelsize=13}${voffset -20}${exec ANO=$(date '+%Y') && LINHA=$(date '+%d.%m.%Y')&& echo "
+${color 000000}${font Open Sans Semibold:pixelsize=13}${voffset -20}${exec ANO=$(date '+%Y') && LINHA=$(date '+%d.%m.%Y')&& echo "
 " && cat /home/`whoami`/.config/conky/esDaily/es$ANO.tsv | grep -w $LINHA | awk -F "	" '{print $7}' | fold -w43 -s}
-${color e0e0e0}${font Open Sans Semibold:pixelsize=12}${voffset -20}${exec ANO=$(date '+%Y') && LINHA=$(date '+%d.%m.%Y') && echo "
-" && printf "—"; cat /home/`whoami`/.config/conky/esDaily/es$ANO.tsv | grep -w $LINHA | awk -F "	" '{print $6}'}
+${color 000000}${font Open Sans Semibold:pixelsize=12}${voffset -20}${exec ANO=$(date '+%Y') && LINHA=$(date '+%d.%m.%Y') && echo "
+" && printf "—"; cat /home/`whoami`/.config/conky/esDaily/es$ANO.tsv | grep -w $LINHA | awk -F "	" '{print $6}' | fold -w43 -s}
