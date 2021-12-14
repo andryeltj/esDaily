@@ -4,6 +4,7 @@ Texto diário atravéz do conky
 <img src="https://github.com/andryeltj/esDaily/blob/master/esDaily.png" width="350" />
 </p>
 São necessários os seguintes pacotes:
+
 >libxml2-utils apache2 w3m fonts-open-sans
 
 Crie uma pasta em `/var/www/html` com o nome `daily`.
