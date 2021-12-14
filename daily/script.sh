@@ -27,12 +27,12 @@ cp /tmp/tt.htm /var/www/html/txtdaily
 cp /tmp/t1.htm /var/www/html/txtdaily
 cp /tmp/c1.htm /var/www/html/txtdaily
 
-w3m http://localhost/txtdaily/tt.htm > /tmp/dayh
+w3m http://localhost/txtdaily/tt.htm > /tmp/dayhx
 w3m http://localhost/txtdaily/t1.htm > /tmp/daytxt
 w3m http://localhost/txtdaily/c1.htm > /tmp/daycomm
 #cp /tmp/daytt $Route/daytt
 
-tr '\n' ' ' < /tmp/dayh > /tmp/dayh
+tr '\n' ' ' < /tmp/dayhx > /tmp/dayh
 tr '\n' ' ' < /tmp/daytxt > /tmp/dayt
 tr '\n' ' ' < /tmp/daycomm > /tmp/dayc
-rm /tmp/analisis.html /tmp/today.html /var/www/html/txtdaily/tt.htm /var/www/html/txtdaily/t1.htm /var/www/html/txtdaily/c1.htm /tmp/tt.htm /tmp/t1.htm /tmp/c1.htm /tmp/dayh /tmp/daytxt /tmp/daycomm
+rm /tmp/analisis.html /tmp/today.html /var/www/html/txtdaily/tt.htm /var/www/html/txtdaily/t1.htm /var/www/html/txtdaily/c1.htm /tmp/tt.htm /tmp/t1.htm /tmp/c1.htm /tmp/dayhx /tmp/daytxt /tmp/daycomm
