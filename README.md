@@ -11,3 +11,8 @@ Teste em um terminal
 
 Altere a linguagem do texto no arquivo `~/.conky/daily/language`.
 O padrão é a linguagem do seu dispositivo, mas pode ser alterado para que fique fixo em outra baseada na sigla usada pela Organzação para sua congregação.
+Exemplo.:
+>Português (Portugal) = `jw-tpo`
+>Françês = `fr`
+>Inglês = `en`
+>Italiano = `it`
