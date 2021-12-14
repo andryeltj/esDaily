@@ -3,8 +3,11 @@ Texto diário atravéz do conky
 <p align="center">
 <img src="https://github.com/andryeltj/esDaily/blob/master/esDaily.png" width="350" />
 </p>
-Execute o daily
+Extraia a pasta daily para `~/.conky`
+Execute o `Run`
 
-Obs.: "Bug" temporário. Ao XTERM abrir, pode fechálo que o Conky voltará a funcionar normalmente.
+Teste em um terminal
+>conky -c ~/.conky/daily/run
 
-O banco de dados ainda está faltando alguns dias a frente mas irei inseri-los mais a frente.
+Altere a linguagem do texto no arquivo `~/.conky/daily/language`.
+O padrão é a linguagem do seu dispositivo, mas pode ser alterado para que fique fixo em outra baseada na sigla usada pela Organzação para sua congregação.
