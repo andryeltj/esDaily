@@ -3,6 +3,12 @@ Texto diário atravéz do conky
 <p align="center">
 <img src="https://github.com/andryeltj/esDaily/blob/master/esDaily.png" width="350" />
 </p>
+São necessários os seguintes pacotes:
+>libxml2-utils apache2 w3m fonts-open-sans
+
+Crie uma pasta em `/var/www/html` com o nome `daily`.
+> sudo mkdir /var/www/html/daily && sudo -R 777 /var/www/html/daily
+
 Extraia a pasta daily para ` ~/.conky`.
 
 Execute o `run`.
