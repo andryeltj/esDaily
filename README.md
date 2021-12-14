@@ -3,9 +3,9 @@ Texto diário atravéz do conky
 <p align="center">
 <img src="https://github.com/andryeltj/esDaily/blob/master/esDaily.png" width="350" />
 </p>
-Extraia a pasta daily para `~/.conky`.
+Extraia a pasta daily para ` ~/.conky`.
 
-Execute o `Run`.
+Execute o `run`.
 
 Teste em um terminal
 >conky -c ~/.conky/daily/run
@@ -19,3 +19,5 @@ Exemplo.:
 >Françês = `fr`
 >Inglês = `en`
 >Italiano = `it`
+
+E etc.
