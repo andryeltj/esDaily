@@ -3,7 +3,7 @@ Texto diário atravéz do conky
 <p align="center">
 <img src="https://github.com/andryeltj/esDaily/blob/master/esDaily.png" width="350" />
 </p>
-São necessários os seguintes pacotes:
+São necessários os seguintes pacotes adicionais:
 
 >libxml2-utils apache2 w3m fonts-open-sans
 
