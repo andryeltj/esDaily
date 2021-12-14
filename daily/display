@@ -1,0 +1,18 @@
+#!/bin/bash
+USR=$(whoami)
+DAY=$(date '+%d')
+AQUI="/home/$USR/.conky/daily"
+
+LNGH=$(cat $AQUI/language)
+LNGS=$(cat /tmp/language)
+if [[ $LNGH == $LGNS ]]; then troca=troca; else sh -c $AQUI/script.sh; fi
+
+if [ -f /tmp/dayh ]; then troca=troca; else sh -c $AQUI/script.sh; fi
+if [ -f /tmp/dayh ]; then troca=troca; else sh -c $AQUI/script.sh; fi
+#cp /tmp/daytt ./dayh
+DIA=$(cat /tmp/dayh | tr -dc '0-9')
+
+if [[ $1 == "h" ]]; then if [[ $DIA == $DAY ]]; then cat /tmp/dayh; else sh -c $AQUI/script.sh; cat /tmp/dayh; fi fi
+if [[ $1 == "t" ]]; then cat /tmp/dayt; fi
+if [[ $1 == "c" ]]; then cat /tmp/dayc; fi
+cat $AQUI/language > /tmp/language
