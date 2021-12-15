@@ -1,4 +1,5 @@
 background no
+update_interval 15
 use_xft yes
 #xftfont monospace:pixelsize 10
 #xftfont Blue Highway:pixelsize 16
