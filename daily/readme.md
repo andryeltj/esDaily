@@ -1,3 +1,3 @@
 Requiriments to install:
 
-libxml2-utils apache2 w3m fonts-open-sans
+libxml2-utils w3m fonts-open-sans
