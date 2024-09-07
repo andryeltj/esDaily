@@ -31,7 +31,6 @@ load(){
  c1=$(echo $today | xmllint --html --xpath '//p[@class="sb"]' --noout - 2>/dev/null  | sed -n 2p | w3m -T text/html);
  };
 
-echo "$DAY" "$mDAY"
 if [ "$DAY" != "$mDAY" ]; then download; load; echo $DAY > /tmp/daily-config
 else
   if [ -f $AQUI/data.html ]; then today=$(cat $AQUI/data.html); else download; fi;
