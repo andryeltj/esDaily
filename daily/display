@@ -1,18 +1,43 @@
-#!/bin/bash
-USR=$(whoami)
+#! /bin/bash
+	##install sudo apt install libxml2-utils apache2 w3m fonts-open-sans
+AQUI=$PWD
+eu=$(whoami)
+Route="/home/$eu/.conky/daily"
+YEAR=$(date '+%Y')
+MONTH=$(date '+%m')
 DAY=$(date '+%d')
-AQUI="/home/$USR/.conky/daily"
+nDAY=$(date '+%A')
+mYEAR=''
+mMONTH=''
+mDAY=''
+tt=''
+t1=''
+c1=''
 
-LNGH=$(cat $AQUI/language)
-LNGS=$(cat /tmp/language)
-if [[ $LNGH == $LGNS ]]; then troca=troca; else sh -c $AQUI/script.sh; fi
+if [ -f /tmp/daily-config ]; then mDAY=$(cat /tmp/daily-config); fi
+ 
+download() {
+ #USRAGT="Mozilla/5.0 (X11; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0 PaleMoon/29.3.0"
+ USRAGT="Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Goanna/6.1 Firefox/102.0 PaleMoon/32.1.1"
+ wLang=$(echo $LANG | awk -F "." '{print $1}' | awk -F "_" '{print $1}')
+ LinKmain=$(wget https://wol.jw.org/ -q -c --user-agent="$USRAGT" -O - | grep 'hreflang="'$wLang'"' | awk -F '"' '{print $10}')
+ LADD=https://wol.jw.org$LinKmain/$YEAR/$MONTH/$DAY
+ today=$(wget $LADD --user-agent="$USRAGT" -q -c -O -)
+ echo $today > $AQUI/data.html
+ };
+load(){
+ tt=$(echo $today | xmllint --html --xpath '//h2/text()' --noout - 2>/dev/null | sed -n 2p );
+ t1=$(echo $today | xmllint --html --xpath '//p[@class="themeScrp"]' --noout - 2>/dev/null  | sed -n 2p | w3m -T text/html);
+ c1=$(echo $today | xmllint --html --xpath '//p[@class="sb"]' --noout - 2>/dev/null  | sed -n 2p | w3m -T text/html);
+ };
 
-if [ -f /tmp/dayh ]; then troca=troca; else sh -c $AQUI/script.sh; fi
-if [ -f /tmp/dayh ]; then troca=troca; else sh -c $AQUI/script.sh; fi
-#cp /tmp/daytt ./dayh
-DIA=$(cat /tmp/dayh | tr -dc '0-9')
+echo "$DAY" "$mDAY"
+if [ "$DAY" != "$mDAY" ]; then download; load; echo $DAY > /tmp/daily-config
+else
+  if [ -f $AQUI/data.html ]; then today=$(cat $AQUI/data.html); else download; fi;
+  load;
+fi;
 
-if [[ $1 == "h" ]]; then if [[ $DIA == $DAY ]]; then cat /tmp/dayh; else sh -c $AQUI/script.sh; cat /tmp/dayh; fi fi
-if [[ $1 == "t" ]]; then cat /tmp/dayt; fi
-if [[ $1 == "c" ]]; then cat /tmp/dayc; fi
-cat $AQUI/language > /tmp/language
+if [[ $1 == "h" ]]; then echo $tt | tr '\n' ' '; fi;
+if [[ $1 == "t" ]]; then echo $t1 | tr '\n' ' '; fi;
+if [[ $1 == "c" ]]; then echo $c1 | tr '\n' ' '; fi;
